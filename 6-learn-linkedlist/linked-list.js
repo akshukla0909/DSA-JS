@@ -76,16 +76,16 @@ class LinkedList {
 
       // It will stop when it reaches the exact node to delete
       // At this point(when while loop stop), we have both prev and current
-      // Just unlink the current, but set its next pointer to prev
+      // Just unlink the current, but set its next pointer to prev.
       while(current && currentIndex < index ){
          prev = current
          current = current.next;
          currentIndex++;
         }
 
-         if(!current){
+        if(!current){
           console.log("index out of bound")
-         }
+        }
 
         // Important point to remember: prev.next was pointing to the node to delete
         // So we update prev.next to current.next
